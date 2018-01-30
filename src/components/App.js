@@ -27,20 +27,30 @@ class App extends Component{
 				{
 			friendsToShow.map(
 				friend => <li>
-					<Personajes name={friend.name} />
+					<Personajes name={friend.name}
+					 						image={friend.image}
+											house={friend.house}
+											alive={friend.alive} />
 				</li>
 			)
 		}
-
 	</ul>);
 
  }
-	render(){
-		return(
-			<div>
-			<h1>My Harry Potter Characters</h1>
-			{ this.paintPotter() }
 
+	render(){
+		const contentG = (event) => {
+		 let potter = event.target.value;
+		 if (potter.includes('g') === true){
+			 console.log('super Potter');
+		 }
+		}
+		return(
+
+			<div>
+				<h1>My Harry Potter Characters</h1>
+				<input type="text" onChange={contentG} />
+				{ this.paintPotter() }
 			</div>
 		)
 
