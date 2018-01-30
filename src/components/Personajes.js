@@ -7,9 +7,9 @@ class Personajes extends React.Component{
           <h2 className="name">{ this.props.name }</h2>
           <img className="image"src={ this.props.image } alt=""/>
           <h3 className="house">{ this.props.house }</h3>
-          <span>{ this.props.alive? 'Alive':'Dead' }</span>
+          <img src={ this.props.alive ? "./image/life.png":"./image/dead.jpg" } />
         </div>
-      
+
     );
 
   }
