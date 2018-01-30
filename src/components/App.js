@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import Personajes from './Personajes';
 
+
 class App extends Component{
 	constructor(props){
 		super(props);
 
+		this.letterChange = this.letterChange.bind(this);
+
 		this.state = {
 	      friends: [],
+				input: ''
 				}
 		}
 	componentDidMount() {
@@ -23,10 +27,10 @@ class App extends Component{
 	 paintPotter() {
 		let friendsToShow = this.state.friends;
 		return (
-			<ul>
+			<ul className="listNames">
 				{
 			friendsToShow.map(
-				friend => <li>
+				friend => <li >
 					<Personajes name={friend.name}
 					 						image={friend.image}
 											house={friend.house}
@@ -35,21 +39,22 @@ class App extends Component{
 			)
 		}
 	</ul>);
+ }
 
+ letterChange(event){
+	let potter = event.target.value;
+	if (potter.includes('g') === true){
+		//potter=event.target.value.filter()
+	}
  }
 
 	render(){
-		const contentG = (event) => {
-		 let potter = event.target.value;
-		 if (potter.includes('g') === true){
-			 console.log('super Potter');
-		 }
-		}
+
 		return(
 
-			<div>
-				<h1>My Harry Potter Characters</h1>
-				<input type="text" onChange={contentG} />
+			<div className='app'>
+				<h1 className='title' >My Harry Potter Characters</h1>
+				<input className='box' type="text" onChange={this.letterChange} />
 				{ this.paintPotter() }
 			</div>
 		)
