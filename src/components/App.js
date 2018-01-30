@@ -42,7 +42,7 @@ class App extends Component{
  	}
 
  	letterChange(event){
-	 	this.state.friendsFiltered = this.state.friends.filter(friend => friend.name.includes(event.target.value));
+	 	this.state.friendsFiltered = this.state.friends.filter(friend => friend.name.toLowerCase().includes(event.target.value.toLowerCase()));
 		this.setState({
       filtered : true
     });
@@ -58,7 +58,10 @@ class App extends Component{
 
 			<div className='app'>
 				<h1 className='title' >My Harry Potter Characters</h1>
-				<input className='box' type="text" onChange={this.letterChange} />
+				<div className='box'>
+					<input className='inbox' type="text"
+				 	onChange={this.letterChange} />
+				 </div>
 				{ this.paintPotter(friendsToShow) }
 			</div>
 		)

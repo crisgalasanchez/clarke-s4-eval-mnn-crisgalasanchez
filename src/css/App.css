@@ -7,6 +7,10 @@
 	text-align: center;
 }
 .box{
+	display: flex;
+	justify-content: center;
+}
+.inbox{
   border: 2px solid #ff0062;
 	border-radius: 6px;
 	width: 60%;
@@ -15,7 +19,6 @@
 	font-family: 'Lobster',  serif;
   font-size: 20px;
 	text-align: center;
-
 }
 .listNames{
 	list-style: none;
