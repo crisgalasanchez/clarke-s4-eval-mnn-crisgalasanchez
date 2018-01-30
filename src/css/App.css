@@ -30,16 +30,9 @@
 	padding: 20px;
 }
 .card{
-  /*display: grid;
-  grid-template-columns: 1fr ;*/
   text-align: center;
 }
-/*@media all and (min-width:600px) {
-  .cardBlock{
-     grid-template-columns: auto;
-      grid-gap: 50px;
-    }
-}*/
+
 .image{
   width: 200px;
   height: 250px;
