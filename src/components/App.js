@@ -58,6 +58,7 @@ class App extends Component{
 
 			<div className='app'>
 				<h1 className='title' >My Harry Potter Characters</h1>
+				<p className='looking'> 'Look for your favorite character'</p>
 				<div className='box'>
 					<input className='inbox' type="text"
 				 	onChange={this.letterChange} />
@@ -68,4 +69,5 @@ class App extends Component{
 
 	}
 }
+
 export default App;

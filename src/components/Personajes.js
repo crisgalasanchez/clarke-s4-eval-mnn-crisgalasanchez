@@ -7,10 +7,10 @@ class Personajes extends React.Component{
     return (
         <div className="card">
           <h2 className="name">{ this.props.name }</h2>
-          <div className="frame">
+          <div>
             <img className="image" src={ this.props.image } alt=""/>
           </div>
-          <h3 className="house">{ this.props.house }</h3>
+          <img className = {`house house--${this.props.house}`} />
           <img className="icon" src={ this.props.alive ? Live:Dead } />
         </div>
 
